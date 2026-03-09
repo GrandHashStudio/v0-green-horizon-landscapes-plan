@@ -60,10 +60,10 @@ export function FAQSection() {
                 value={faq.id}
                 className="bg-white rounded-xl border border-forest-200 px-6 shadow-sm data-[state=open]:shadow-md data-[state=open]:border-forest-400 transition-all"
               >
-                <AccordionTrigger className="text-left text-slate-700 hover:text-forest-600 hover:no-underline py-5 text-base sm:text-lg font-medium">
+                <AccordionTrigger className="text-left text-slate-800 hover:text-forest-600 hover:no-underline py-5 text-base sm:text-lg font-bold">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-slate-500 leading-relaxed pb-5">
+                <AccordionContent className="text-slate-700 leading-relaxed pb-5 font-medium">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>
