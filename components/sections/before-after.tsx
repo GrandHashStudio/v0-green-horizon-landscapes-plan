@@ -52,23 +52,23 @@ export function BeforeAfterSection() {
         <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
           {projects.map((project, index) => (
             <ScrollReveal key={project.id} delay={index * 150}>
-              <div className="space-y-4 p-4 rounded-2xl bg-forest-50/50 border border-forest-100">
+              <div className="space-y-4 p-6 rounded-2xl bg-white border border-forest-200 hover:shadow-lg transition-all">
                 <ComparisonSlider
                   beforeImage={project.before}
                   afterImage={project.after}
                 />
-                <div className="flex items-start justify-between px-2">
+                <div className="flex items-start justify-between">
                   <div>
-                    <h3 className="font-semibold text-slate-700 text-lg">
+                    <h3 className="font-bold text-slate-800 text-lg">
                       {project.title}
                     </h3>
-                    <p className="text-sm text-slate-500">{project.location}</p>
+                    <p className="text-sm text-slate-600 font-medium">{project.location}</p>
                   </div>
                   <div className="text-right">
-                    <p className="text-sm font-medium text-forest-600">
+                    <p className="text-sm font-bold text-forest-700">
                       {project.metrics.water}
                     </p>
-                    <p className="text-sm text-slate-500">{project.metrics.value}</p>
+                    <p className="text-sm text-slate-600 font-medium">{project.metrics.value}</p>
                   </div>
                 </div>
               </div>

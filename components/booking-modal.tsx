@@ -129,10 +129,10 @@ export function BookingModal({ open, onOpenChange }: BookingModalProps) {
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="sm:max-w-lg max-h-[90vh] overflow-y-auto">
         <DialogHeader>
-          <DialogTitle className="text-2xl text-slate-700">
+          <DialogTitle className="text-2xl text-slate-800 font-bold">
             Book Your Free Consultation
           </DialogTitle>
-          <DialogDescription className="text-slate-500">
+          <DialogDescription className="text-slate-600 font-medium">
             Tell us about your project and we will create a custom plan just for you.
           </DialogDescription>
         </DialogHeader>
