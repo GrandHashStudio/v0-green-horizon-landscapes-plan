@@ -4,58 +4,60 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Sage Palette - Primary Brand */
-  --sage-50: #f6f7f4;
-  --sage-100: #e8ebe3;
-  --sage-200: #d4dac9;
-  --sage-300: #b8c4a5;
-  --sage-400: #9aad80;
-  --sage-500: #7d9660;
-  --sage-600: #637a4a;
-  --sage-700: #4d5f3a;
-  --sage-800: #3a472d;
-  --sage-900: #2a3321;
+  /* Forest Green Palette - Primary Brand */
+  --forest-50: #f0f7f4;
+  --forest-100: #dcefe5;
+  --forest-200: #bbdfcd;
+  --forest-300: #8dc8ad;
+  --forest-400: #5aab86;
+  --forest-500: #388e6a;
+  --forest-600: #228b22;
+  --forest-700: #1e7a1e;
+  --forest-800: #1a5f1a;
+  --forest-900: #154d15;
+  --forest-950: #0a2e0a;
 
   /* Slate Palette - Neutrals */
-  --slate-50: #f8f9fa;
-  --slate-100: #f1f3f4;
-  --slate-200: #e8eaed;
-  --slate-300: #dadce0;
-  --slate-400: #9aa0a6;
-  --slate-500: #5f6368;
-  --slate-600: #3c4043;
-  --slate-700: #202124;
+  --slate-50: #f8faf9;
+  --slate-100: #f1f4f3;
+  --slate-200: #e3e8e6;
+  --slate-300: #cdd5d2;
+  --slate-400: #9aa6a1;
+  --slate-500: #5f6e68;
+  --slate-600: #3c4a45;
+  --slate-700: #1e2925;
 
-  /* Sand Palette - Warm Accents */
-  --sand-50: #fdfcfb;
-  --sand-100: #f9f6f2;
-  --sand-200: #f0ebe3;
-  --sand-300: #e4dcd0;
+  /* Sand/Earth Palette - Warm Accents */
+  --sand-50: #fdfcfa;
+  --sand-100: #f9f6f0;
+  --sand-200: #f0eadc;
+  --sand-300: #e4dcc8;
 
   /* Semantic Tokens */
-  --background: var(--sand-50);
-  --background-alt: var(--sage-50);
+  --background: #ffffff;
+  --background-alt: var(--forest-50);
+  --background-dark: var(--forest-950);
   --foreground: var(--slate-700);
   --foreground-muted: var(--slate-500);
-  --foreground-inverse: var(--sand-50);
+  --foreground-inverse: #ffffff;
 
   --card: #ffffff;
   --card-foreground: var(--slate-700);
   --popover: #ffffff;
   --popover-foreground: var(--slate-700);
 
-  --primary: var(--sage-600);
-  --primary-hover: var(--sage-700);
+  --primary: var(--forest-600);
+  --primary-hover: var(--forest-700);
   --primary-foreground: #ffffff;
 
-  --secondary: var(--sage-100);
-  --secondary-foreground: var(--sage-800);
+  --secondary: var(--forest-100);
+  --secondary-foreground: var(--forest-800);
 
   --muted: var(--slate-100);
   --muted-foreground: var(--slate-500);
 
-  --accent: var(--sage-400);
-  --accent-foreground: var(--sage-800);
+  --accent: var(--forest-400);
+  --accent-foreground: var(--forest-900);
 
   --destructive: #dc2626;
   --destructive-foreground: #ffffff;
@@ -63,10 +65,12 @@
   --border: var(--slate-200);
   --border-muted: var(--sand-300);
   --input: var(--slate-200);
-  --ring: var(--sage-500);
+  --ring: var(--forest-500);
 
-  --footer-bg: var(--sage-900);
-  --footer-foreground: var(--sand-50);
+  --header-bg: var(--forest-950);
+  --header-foreground: #ffffff;
+  --footer-bg: var(--forest-950);
+  --footer-foreground: #ffffff;
 
   --radius: 0.5rem;
   --radius-lg: 1rem;
@@ -78,17 +82,18 @@
   --font-serif: 'Playfair Display', 'Playfair Display Fallback', Georgia, serif;
   --font-mono: 'Geist Mono', 'Geist Mono Fallback', monospace;
 
-  /* Sage Colors */
-  --color-sage-50: var(--sage-50);
-  --color-sage-100: var(--sage-100);
-  --color-sage-200: var(--sage-200);
-  --color-sage-300: var(--sage-300);
-  --color-sage-400: var(--sage-400);
-  --color-sage-500: var(--sage-500);
-  --color-sage-600: var(--sage-600);
-  --color-sage-700: var(--sage-700);
-  --color-sage-800: var(--sage-800);
-  --color-sage-900: var(--sage-900);
+  /* Forest Green Colors */
+  --color-forest-50: var(--forest-50);
+  --color-forest-100: var(--forest-100);
+  --color-forest-200: var(--forest-200);
+  --color-forest-300: var(--forest-300);
+  --color-forest-400: var(--forest-400);
+  --color-forest-500: var(--forest-500);
+  --color-forest-600: var(--forest-600);
+  --color-forest-700: var(--forest-700);
+  --color-forest-800: var(--forest-800);
+  --color-forest-900: var(--forest-900);
+  --color-forest-950: var(--forest-950);
 
   /* Slate Colors */
   --color-slate-50: var(--slate-50);
@@ -109,6 +114,7 @@
   /* Semantic Colors */
   --color-background: var(--background);
   --color-background-alt: var(--background-alt);
+  --color-background-dark: var(--background-dark);
   --color-foreground: var(--foreground);
   --color-foreground-muted: var(--foreground-muted);
   --color-foreground-inverse: var(--foreground-inverse);
@@ -131,6 +137,8 @@
   --color-border-muted: var(--border-muted);
   --color-input: var(--input);
   --color-ring: var(--ring);
+  --color-header-bg: var(--header-bg);
+  --color-header-foreground: var(--header-foreground);
   --color-footer-bg: var(--footer-bg);
   --color-footer-foreground: var(--footer-foreground);
 
@@ -141,10 +149,22 @@
   --radius-full: var(--radius-full);
 }
 
-/* CTA Pulse Animation */
+/* CTA Pulse Animation - Forest Green */
 @keyframes pulse-subtle {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(99, 122, 74, 0.4); }
-  50% { box-shadow: 0 0 0 12px rgba(99, 122, 74, 0); }
+  0%, 100% { box-shadow: 0 0 0 0 rgba(34, 139, 34, 0.4); }
+  50% { box-shadow: 0 0 0 12px rgba(34, 139, 34, 0); }
+}
+
+/* Leaf floating animation */
+@keyframes float-leaf {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  25% { transform: translateY(-10px) rotate(5deg); }
+  50% { transform: translateY(-5px) rotate(-3deg); }
+  75% { transform: translateY(-15px) rotate(3deg); }
+}
+
+.animate-float-leaf {
+  animation: float-leaf 6s ease-in-out infinite;
 }
 
 .animate-pulse-subtle {

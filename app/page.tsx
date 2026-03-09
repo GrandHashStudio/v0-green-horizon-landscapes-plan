@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { Header } from '@/components/header'
 import { HeroSection } from '@/components/sections/hero'
 import { ServicesSection } from '@/components/sections/services'
 import { BeforeAfterSection } from '@/components/sections/before-after'
@@ -19,17 +20,20 @@ export default function HomePage() {
   }
 
   return (
-    <main>
-      <HeroSection onOpenBooking={handleOpenBooking} />
-      <ServicesSection onOpenBooking={handleOpenBooking} />
-      <BeforeAfterSection />
-      <TestimonialsSection />
-      <ProcessSection />
-      <FAQSection />
-      <FooterCTASection onOpenBooking={handleOpenBooking} />
+    <>
+      <Header onOpenBooking={handleOpenBooking} />
+      <main>
+        <HeroSection onOpenBooking={handleOpenBooking} />
+        <ServicesSection onOpenBooking={handleOpenBooking} />
+        <BeforeAfterSection />
+        <TestimonialsSection />
+        <ProcessSection />
+        <FAQSection />
+        <FooterCTASection onOpenBooking={handleOpenBooking} />
+      </main>
       
       <BookingModal open={isBookingOpen} onOpenChange={setIsBookingOpen} />
       <FloatingCTA onOpenBooking={handleOpenBooking} />
-    </main>
+    </>
   )
 }

@@ -109,8 +109,8 @@ export function BookingModal({ open, onOpenChange }: BookingModalProps) {
       <Dialog open={open} onOpenChange={onOpenChange}>
         <DialogContent className="sm:max-w-md">
           <div className="flex flex-col items-center justify-center py-8 text-center">
-            <div className="w-16 h-16 rounded-full bg-sage-100 flex items-center justify-center mb-4">
-              <CheckCircle2 className="size-8 text-sage-600" />
+            <div className="w-16 h-16 rounded-full bg-forest-100 flex items-center justify-center mb-4">
+              <CheckCircle2 className="size-8 text-forest-600" />
             </div>
             <DialogTitle className="text-2xl text-slate-700 mb-2">
               Thank You!
@@ -273,7 +273,7 @@ export function BookingModal({ open, onOpenChange }: BookingModalProps) {
           <Button
             type="submit"
             disabled={isSubmitting}
-            className="w-full h-12 text-base font-semibold rounded-full bg-sage-600 hover:bg-sage-700 text-white"
+            className="w-full h-12 text-base font-semibold rounded-full bg-forest-600 hover:bg-forest-700 text-white"
           >
             {isSubmitting ? (
               <>

@@ -1,6 +1,6 @@
 'use client'
 
-import { Search, Palette, Hammer, Sparkles } from 'lucide-react'
+import { Search, Palette, Hammer, Sparkles, Leaf } from 'lucide-react'
 import { ScrollReveal } from '@/components/scroll-reveal'
 
 const steps = [
@@ -36,16 +36,17 @@ const steps = [
 
 export function ProcessSection() {
   return (
-    <section className="py-24 bg-sand-50" id="process">
+    <section className="py-24 bg-white" id="process">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollReveal>
           <div className="text-center mb-16">
-            <span className="inline-block px-4 py-2 rounded-full bg-sand-200 text-sage-700 text-sm font-medium mb-4">
+            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-forest-100 text-forest-700 text-sm font-medium mb-4 border border-forest-200">
+              <Leaf className="size-4" />
               How It Works
             </span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-700 mb-6">
               Your Journey to a
-              <span className="block text-sage-600">Sustainable Oasis</span>
+              <span className="block text-forest-600">Sustainable Oasis</span>
             </h2>
             <p className="text-lg text-slate-500 max-w-2xl mx-auto">
               From consultation to completion, we guide you through every step 
@@ -56,22 +57,22 @@ export function ProcessSection() {
 
         <div className="relative">
           {/* Connection Line - Desktop */}
-          <div className="hidden lg:block absolute top-24 left-0 right-0 h-0.5 bg-sage-200" />
+          <div className="hidden lg:block absolute top-24 left-0 right-0 h-0.5 bg-forest-200" />
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6">
             {steps.map((step, index) => (
               <ScrollReveal key={step.number} delay={index * 150} direction="left">
                 <div className="relative text-center lg:text-left">
                   {/* Step Number Circle */}
-                  <div className="relative z-10 mx-auto lg:mx-0 w-16 h-16 rounded-full bg-sage-600 flex items-center justify-center mb-6 shadow-lg">
+                  <div className="relative z-10 mx-auto lg:mx-0 w-16 h-16 rounded-full bg-forest-600 flex items-center justify-center mb-6 shadow-lg">
                     <step.icon className="size-7 text-white" />
                   </div>
 
                   {/* Content */}
                   <div className="space-y-3">
                     <div className="flex items-center justify-center lg:justify-start gap-3">
-                      <span className="text-sm font-bold text-sage-600">{step.number}</span>
-                      <span className="text-xs text-slate-400 px-2 py-1 bg-sand-100 rounded-full">
+                      <span className="text-sm font-bold text-forest-600">{step.number}</span>
+                      <span className="text-xs text-slate-500 px-2 py-1 bg-forest-50 rounded-full border border-forest-100">
                         {step.duration}
                       </span>
                     </div>

@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { ArrowRight } from 'lucide-react'
+import { ArrowRight, Leaf } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
 interface FloatingCTAProps {
@@ -12,10 +12,6 @@ export function FloatingCTA({ onOpenBooking }: FloatingCTAProps) {
   const [isVisible, setIsVisible] = useState(false)
 
   useEffect(() => {
-    const prefersReducedMotion = window.matchMedia(
-      '(prefers-reduced-motion: reduce)'
-    ).matches
-
     const handleScroll = () => {
       // Show after scrolling past 100vh (the hero section)
       const scrollThreshold = window.innerHeight
@@ -30,7 +26,7 @@ export function FloatingCTA({ onOpenBooking }: FloatingCTAProps) {
 
   return (
     <div
-      className={`fixed bottom-0 left-0 right-0 z-50 p-4 bg-white/95 backdrop-blur-sm border-t border-sand-200 shadow-lg md:hidden transition-transform duration-300 ${
+      className={`fixed bottom-0 left-0 right-0 z-50 p-4 bg-forest-950/95 backdrop-blur-sm border-t border-forest-800 shadow-lg md:hidden transition-transform duration-300 ${
         isVisible ? 'translate-y-0' : 'translate-y-full'
       }`}
       style={{
@@ -41,8 +37,9 @@ export function FloatingCTA({ onOpenBooking }: FloatingCTAProps) {
     >
       <Button
         onClick={onOpenBooking}
-        className="w-full h-12 text-base font-semibold rounded-full bg-sage-600 hover:bg-sage-700 text-white shadow-md animate-pulse-subtle"
+        className="w-full h-12 text-base font-semibold rounded-full bg-forest-600 hover:bg-forest-500 text-white shadow-md animate-pulse-subtle"
       >
+        <Leaf className="mr-2 size-4" />
         Book Your Consultation
         <ArrowRight className="ml-2 size-5" />
       </Button>

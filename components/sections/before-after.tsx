@@ -1,5 +1,6 @@
 'use client'
 
+import { Leaf } from 'lucide-react'
 import { ComparisonSlider } from '@/components/comparison-slider'
 import { ScrollReveal } from '@/components/scroll-reveal'
 
@@ -30,11 +31,12 @@ const projects = [
 
 export function BeforeAfterSection() {
   return (
-    <section className="py-24 bg-sand-50" id="portfolio">
+    <section className="py-24 bg-white" id="portfolio">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollReveal>
           <div className="text-center mb-16">
-            <span className="inline-block px-4 py-2 rounded-full bg-sand-200 text-sage-700 text-sm font-medium mb-4">
+            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-forest-100 text-forest-700 text-sm font-medium mb-4 border border-forest-200">
+              <Leaf className="size-4" />
               Our Work
             </span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-700 mb-6">
@@ -50,12 +52,12 @@ export function BeforeAfterSection() {
         <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
           {projects.map((project, index) => (
             <ScrollReveal key={project.id} delay={index * 150}>
-              <div className="space-y-4">
+              <div className="space-y-4 p-4 rounded-2xl bg-forest-50/50 border border-forest-100">
                 <ComparisonSlider
                   beforeImage={project.before}
                   afterImage={project.after}
                 />
-                <div className="flex items-start justify-between">
+                <div className="flex items-start justify-between px-2">
                   <div>
                     <h3 className="font-semibold text-slate-700 text-lg">
                       {project.title}
@@ -63,7 +65,7 @@ export function BeforeAfterSection() {
                     <p className="text-sm text-slate-500">{project.location}</p>
                   </div>
                   <div className="text-right">
-                    <p className="text-sm font-medium text-sage-600">
+                    <p className="text-sm font-medium text-forest-600">
                       {project.metrics.water}
                     </p>
                     <p className="text-sm text-slate-500">{project.metrics.value}</p>

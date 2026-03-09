@@ -1,5 +1,6 @@
 'use client'
 
+import { Leaf } from 'lucide-react'
 import {
   Accordion,
   AccordionContent,
@@ -33,16 +34,17 @@ const faqs = [
 
 export function FAQSection() {
   return (
-    <section className="py-24 bg-sage-50" id="faq">
+    <section className="py-24 bg-forest-50" id="faq">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollReveal>
           <div className="text-center mb-12">
-            <span className="inline-block px-4 py-2 rounded-full bg-sage-200 text-sage-700 text-sm font-medium mb-4">
+            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-forest-200 text-forest-700 text-sm font-medium mb-4 border border-forest-300">
+              <Leaf className="size-4" />
               Common Questions
             </span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-700 mb-6">
               Got Questions?
-              <span className="block text-sage-600">We Have Answers</span>
+              <span className="block text-forest-600">We Have Answers</span>
             </h2>
             <p className="text-lg text-slate-500">
               Everything you need to know about sustainable landscaping with GreenHorizon.
@@ -56,9 +58,9 @@ export function FAQSection() {
               <AccordionItem
                 key={faq.id}
                 value={faq.id}
-                className="bg-white rounded-xl border border-sand-200 px-6 shadow-sm data-[state=open]:shadow-md transition-shadow"
+                className="bg-white rounded-xl border border-forest-200 px-6 shadow-sm data-[state=open]:shadow-md data-[state=open]:border-forest-400 transition-all"
               >
-                <AccordionTrigger className="text-left text-slate-700 hover:text-sage-600 hover:no-underline py-5 text-base sm:text-lg font-medium">
+                <AccordionTrigger className="text-left text-slate-700 hover:text-forest-600 hover:no-underline py-5 text-base sm:text-lg font-medium">
                   {faq.question}
                 </AccordionTrigger>
                 <AccordionContent className="text-slate-500 leading-relaxed pb-5">
@@ -75,7 +77,7 @@ export function FAQSection() {
               Still have questions?{' '}
               <a 
                 href="mailto:elias@greenhorizonlandscapes.com" 
-                className="text-sage-600 hover:text-sage-700 font-medium underline underline-offset-4"
+                className="text-forest-600 hover:text-forest-700 font-medium underline underline-offset-4"
               >
                 Contact Elias directly
               </a>
