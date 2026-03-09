@@ -1,32 +1,49 @@
-import type { Metadata } from 'next'
-import { Geist, Geist_Mono } from 'next/font/google'
+import type { Metadata, Viewport } from 'next'
+import { Inter, Playfair_Display } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
-const _geist = Geist({ subsets: ["latin"] });
-const _geistMono = Geist_Mono({ subsets: ["latin"] });
+const inter = Inter({ 
+  subsets: ['latin'],
+  variable: '--font-inter',
+  display: 'swap',
+})
+
+const playfair = Playfair_Display({ 
+  subsets: ['latin'],
+  variable: '--font-playfair',
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
-  title: 'v0 App',
-  description: 'Created with v0',
-  generator: 'v0.app',
-  icons: {
-    icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
-    apple: '/apple-icon.png',
+  title: 'GreenHorizon Landscapes | Sustainable Landscaping in Austin',
+  description: 'Transform your outdoor space with sustainable xeriscaping, smart irrigation, and native plant gardens. Water-wise landscaping that increases property value. Book your free consultation today.',
+  keywords: ['sustainable landscaping', 'xeriscaping', 'smart irrigation', 'native plants', 'Austin landscaping', 'eco-friendly landscaping', 'water-wise gardens'],
+  authors: [{ name: 'GreenHorizon Landscapes' }],
+  creator: 'GreenHorizon Landscapes',
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://greenhorizonlandscapes.com',
+    siteName: 'GreenHorizon Landscapes',
+    title: 'GreenHorizon Landscapes | Sustainable Landscaping in Austin',
+    description: 'Transform your outdoor space with sustainable xeriscaping, smart irrigation, and native plant gardens. Book your free consultation today.',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'GreenHorizon Landscapes | Sustainable Landscaping',
+    description: 'Transform your outdoor space with sustainable xeriscaping, smart irrigation, and native plant gardens.',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+}
+
+export const viewport: Viewport = {
+  themeColor: '#637a4a',
+  width: 'device-width',
+  initialScale: 1,
 }
 
 export default function RootLayout({
@@ -35,7 +52,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
       <body className="font-sans antialiased">
         {children}
         <Analytics />
