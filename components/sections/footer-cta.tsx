@@ -62,7 +62,7 @@ export function FooterCTASection({ onOpenBooking }: FooterCTASectionProps) {
       </section>
 
       {/* Footer */}
-      <footer className="bg-forest-100/40 backdrop-blur-xl border-t border-forest-200/50 py-12">
+      <footer className="bg-forest-950 border-t border-forest-800 py-12">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-3 gap-8">
             {/* Brand */}
@@ -72,11 +72,11 @@ export function FooterCTASection({ onOpenBooking }: FooterCTASectionProps) {
                   <Leaf className="size-5 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-forest-900 leading-tight">GreenHorizon</h3>
-                  <span className="text-xs text-forest-600 uppercase tracking-wider font-semibold">Landscapes</span>
+                  <h3 className="text-xl font-bold text-white leading-tight">GreenHorizon</h3>
+                  <span className="text-xs text-forest-400 uppercase tracking-wider">Landscapes</span>
                 </div>
               </div>
-              <p className="text-forest-700 text-sm leading-relaxed mb-4">
+              <p className="text-forest-300 text-sm leading-relaxed mb-4">
                 Sustainable landscaping solutions for Austin homeowners. 
                 Creating beautiful, water-wise outdoor spaces since 2018.
               </p>
@@ -84,14 +84,14 @@ export function FooterCTASection({ onOpenBooking }: FooterCTASectionProps) {
 
             {/* Contact */}
             <div>
-              <h4 className="text-sm font-semibold text-forest-900 uppercase tracking-wider mb-4">
+              <h4 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">
                 Contact
               </h4>
               <ul className="space-y-3">
                 <li>
                   <a 
                     href="tel:+15125551234" 
-                    className="flex items-center gap-3 text-forest-700 hover:text-forest-900 font-medium transition-colors"
+                    className="flex items-center gap-3 text-forest-300 hover:text-white transition-colors"
                   >
                     <Phone className="size-4" />
                     <span>(512) 555-1234</span>
@@ -100,14 +100,14 @@ export function FooterCTASection({ onOpenBooking }: FooterCTASectionProps) {
                 <li>
                   <a 
                     href="mailto:elias@greenhorizonlandscapes.com" 
-                    className="flex items-center gap-3 text-forest-700 hover:text-forest-900 font-medium transition-colors"
+                    className="flex items-center gap-3 text-forest-300 hover:text-white transition-colors"
                   >
                     <Mail className="size-4" />
                     <span>elias@greenhorizonlandscapes.com</span>
                   </a>
                 </li>
                 <li>
-                  <div className="flex items-center gap-3 text-forest-700">
+                  <div className="flex items-center gap-3 text-forest-300">
                     <MapPin className="size-4" />
                     <span>Serving Greater Austin Area</span>
                   </div>
@@ -117,10 +117,10 @@ export function FooterCTASection({ onOpenBooking }: FooterCTASectionProps) {
 
             {/* Hours */}
             <div>
-              <h4 className="text-sm font-semibold text-forest-900 uppercase tracking-wider mb-4">
+              <h4 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">
                 Hours
               </h4>
-              <ul className="space-y-2 text-forest-700 text-sm font-medium">
+              <ul className="space-y-2 text-forest-300 text-sm">
                 <li className="flex justify-between">
                   <span>Monday - Friday</span>
                   <span>8am - 6pm</span>
@@ -137,15 +137,15 @@ export function FooterCTASection({ onOpenBooking }: FooterCTASectionProps) {
             </div>
           </div>
 
-          <div className="mt-10 pt-8 border-t border-forest-200/50 flex flex-col sm:flex-row justify-between items-center gap-4">
-            <p className="text-forest-600 text-sm font-medium">
+          <div className="mt-10 pt-8 border-t border-forest-800 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <p className="text-forest-400 text-sm">
               &copy; {new Date().getFullYear()} GreenHorizon Landscapes. All rights reserved.
             </p>
             <div className="flex gap-6">
-              <a href="#" className="text-forest-600 hover:text-forest-900 text-sm font-medium transition-colors">
+              <a href="#" className="text-forest-400 hover:text-white text-sm transition-colors">
                 Privacy Policy
               </a>
-              <a href="#" className="text-forest-600 hover:text-forest-900 text-sm font-medium transition-colors">
+              <a href="#" className="text-forest-400 hover:text-white text-sm transition-colors">
                 Terms of Service
               </a>
             </div>

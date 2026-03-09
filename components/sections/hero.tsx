@@ -63,10 +63,10 @@ export function HeroSection({ onOpenBooking }: HeroSectionProps) {
           <Button
             onClick={onOpenBooking}
             size="lg"
-            className="h-14 px-10 text-lg font-bold rounded-full bg-forest-600 hover:bg-forest-700 text-white shadow-xl hover:shadow-2xl transition-all duration-300 animate-pulse-subtle border-2 border-forest-700"
+            className="h-14 px-8 text-lg font-semibold rounded-full bg-forest-600 hover:bg-forest-700 text-white shadow-lg hover:shadow-xl transition-all duration-300 animate-pulse-subtle"
           >
             Book Your Consultation
-            <ArrowRight className="ml-3 size-5" />
+            <ArrowRight className="ml-2 size-5" />
           </Button>
           <p className="mt-4 text-sm text-slate-400">
             Free consultation. No obligation. Results guaranteed.

@@ -73,22 +73,21 @@ export function TestimonialsSection() {
         <div className="grid md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
             <ScrollReveal key={testimonial.id} delay={index * 100}>
-              <Card className="h-full bg-white border-forest-200 hover:shadow-xl hover:border-forest-400 transition-all duration-300 overflow-hidden">
-                <div className="h-1 bg-gradient-to-r from-forest-400 to-forest-600" />
+              <Card className="h-full bg-white border-forest-200 hover:shadow-lg hover:border-forest-300 transition-all duration-300">
                 <CardContent className="pt-6">
-                  <Quote className="size-10 text-forest-300 mb-4" />
-                  <p className="text-slate-700 leading-relaxed mb-6 font-medium text-base">
+                  <Quote className="size-10 text-forest-200 mb-4" />
+                  <p className="text-slate-600 leading-relaxed mb-6">
                     &ldquo;{testimonial.quote}&rdquo;
                   </p>
                   <div className="border-t border-forest-100 pt-4">
-                    <div className="flex items-center justify-between mb-3">
+                    <div className="flex items-center justify-between">
                       <div>
-                        <p className="font-bold text-slate-800">{testimonial.name}</p>
-                        <p className="text-sm text-slate-600">{testimonial.location}</p>
+                        <p className="font-semibold text-slate-700">{testimonial.name}</p>
+                        <p className="text-sm text-slate-500">{testimonial.location}</p>
                       </div>
                       <StarRating rating={testimonial.rating} />
                     </div>
-                    <p className="text-xs text-forest-700 font-semibold bg-forest-50 px-2 py-1 rounded inline-block">
+                    <p className="text-xs text-forest-600 mt-2 font-medium">
                       {testimonial.projectType}
                     </p>
                   </div>
